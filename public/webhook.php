@@ -5,13 +5,12 @@
  * Date: 2019-01-10
  * Time: 14:24
  */
-echo shell_exec("cd \ && cd {$path} && git pull 2>&1");
 // 与webhook配置相同，为了安全，请设置此参数
 $secret = "czjge-blog-webhook-key123456!";
 
 // 项目路径
 $path = "/data/blog";
-
+echo shell_exec("cd \ && cd {$path} && git pull 2>&1");
 // 校验发送位置，正确的情况下自动拉取代码，实现自动部署
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 if ($signature) {
