@@ -21,6 +21,5 @@ if ($signature) {
         exit();
     }
 }
-shell_exec("mkdir testdir1");
 
 http_response_code(404);

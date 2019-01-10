@@ -1,4 +1,3 @@
 <?php
 
-$cmd = 'mkdir testdir';
-shell_exec($cmd);
+print_r(shell_exec("ls"));
