@@ -5,7 +5,7 @@
  * Date: 2019-01-10
  * Time: 14:24
  */
-
+echo shell_exec("cd \ && cd {$path} && git pull 2>&1");
 // 与webhook配置相同，为了安全，请设置此参数
 $secret = "czjge-blog-webhook-key123456!";
 
