@@ -1,2 +1,4 @@
 <?php
-shell_exec('ls -la');
+
+$cmd = 'mkdir testdir';
+shell_exec($cmd);
