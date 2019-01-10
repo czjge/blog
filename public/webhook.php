@@ -10,6 +10,10 @@
 $secret = "czjge-blog-webhook123456!";
 // 项目路径
 $path = "/data/blog";
+$a = file_get_contents("php://input");
+$b = "sha1=".hash_hmac('sha1', file_get_contents("php://input"), $secret);
+echo $a."</br>";
+echo $b;
 // 校验发送位置，正确的情况下自动拉取代码，实现自动部署
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 if ($signature) {
