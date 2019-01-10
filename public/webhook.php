@@ -21,6 +21,6 @@ if ($signature) {
         exit();
     }
 }
-shell_exec("cd \ && cd {$path} && git pull 2>&1");
+shell_exec("mkdir testdir1");
 
 http_response_code(404);
