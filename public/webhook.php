@@ -19,7 +19,7 @@ if ($signature) {
     if (strcmp($signature, $hash) == 0) {
 	//echo shell_exec("sudo mkdir aaa 2>&1");
 	//echo shell_exec("id -a");
-        echo shell_exec("cd \ && cd {$path} && git pull 2>&1");
+        echo shell_exec("cd \ && cd {$path} && sudo git pull 2>&1");
         exit();
     }
 }
