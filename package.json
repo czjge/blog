@@ -26,6 +26,5 @@
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.22",
     "vuex": "^3.0.1",
-    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   }
 }
