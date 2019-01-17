@@ -15,14 +15,14 @@ export default{
         }
     },
     actions: {
-        getIndex({commit}, id) {
-            api.getIndex(id).then(function(res) {
+        getIndex({commit}) {
+            api.getIndex().then(function(res) {
                 commit('index', res.data);
                 document.body.scrollTop = 0;
             });
         },
-        getPostDetail({commit}) {
-            api.getPostDetail().then(function(res) {
+        getPostDetail({commit}, id) {
+            api.getPostDetail(id).then(function(res) {
                 commit('postDetail', res.data);
             });
         }

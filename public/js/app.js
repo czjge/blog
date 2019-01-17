@@ -1782,7 +1782,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])({
@@ -1812,8 +1811,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
 //
 //
 //
@@ -37343,7 +37340,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "panel panel-default" }, [
-    _c("div", { staticClass: "panel-heading" }, [_vm._v("新闻列表")]),
+    _c("div", { staticClass: "panel-heading" }, [_vm._v("首页")]),
     _vm._v(" "),
     _c(
       "ul",
@@ -37353,20 +37350,11 @@ var render = function() {
           "li",
           { staticClass: "list-group-item" },
           [
-            _c(
-              "router-link",
-              { attrs: { to: { path: "/detail/" + row.id } } },
-              [
-                row.is_recommend
-                  ? _c("span", { staticClass: "label label-success" }, [
-                      _vm._v("推荐")
-                    ])
-                  : _vm._e(),
-                _vm._v(
-                  "\n                " + _vm._s(row.title) + "\n            "
-                )
-              ]
-            ),
+            _c("router-link", { attrs: { to: { path: "/" + row.id } } }, [
+              _vm._v(
+                "\n                " + _vm._s(row.title) + "\n            "
+              )
+            ]),
             _vm._v(" "),
             _c("span", { staticClass: "pull-right" }, [
               _vm._v(_vm._s(row.created))
@@ -37404,27 +37392,8 @@ var render = function() {
   return _c("div", [
     _c("ol", { staticClass: "breadcrumb" }, [
       _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "li",
-        [
-          _c(
-            "router-link",
-            { staticClass: "pull-right", attrs: { to: "/list" } },
-            [_vm._v("新闻")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
+      _vm._v("-\n        "),
       _c("li", { staticClass: "active" }, [_vm._v(_vm._s(_vm.detail.title))])
-    ]),
-    _vm._v(" "),
-    _c("h3", [
-      _vm.detail.is_recommend
-        ? _c("span", { staticClass: "label label-success" }, [_vm._v("推荐")])
-        : _vm._e(),
-      _vm._v(" " + _vm._s(_vm.detail.title))
     ]),
     _vm._v(" "),
     _c("p", [_vm._v("创建时间：" + _vm._s(_vm.detail.created_at))]),
@@ -52638,16 +52607,16 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   actions: {
-    getIndex: function getIndex(_ref, id) {
+    getIndex: function getIndex(_ref) {
       var commit = _ref.commit;
-      _api__WEBPACK_IMPORTED_MODULE_0__["default"].getIndex(id).then(function (res) {
+      _api__WEBPACK_IMPORTED_MODULE_0__["default"].getIndex().then(function (res) {
         commit('index', res.data);
         document.body.scrollTop = 0;
       });
     },
-    getPostDetail: function getPostDetail(_ref2) {
+    getPostDetail: function getPostDetail(_ref2, id) {
       var commit = _ref2.commit;
-      _api__WEBPACK_IMPORTED_MODULE_0__["default"].getPostDetail().then(function (res) {
+      _api__WEBPACK_IMPORTED_MODULE_0__["default"].getPostDetail(id).then(function (res) {
         commit('postDetail', res.data);
       });
     }

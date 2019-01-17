@@ -1,11 +1,10 @@
 <template>
     <div class="panel panel-default">
-        <div class="panel-heading">新闻列表</div>
+        <div class="panel-heading">首页</div>
         <ul class="list-group">
             <li class="list-group-item"
                 v-for="row in lists">
-                <router-link :to="{path:'/detail/' + row.id}">
-                    <span class="label label-success" v-if="row.is_recommend">推荐</span>
+                <router-link :to="{path:'/' + row.id}">
                     {{ row.title }}
                 </router-link>
                 <span class="pull-right">{{ row.created }}</span>

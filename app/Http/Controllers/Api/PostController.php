@@ -17,6 +17,7 @@ class PostController extends Controller
         foreach ($list as $key => $value) {
             $list[$key]->created = $list[$key]->created_at->diffForHumans();
         }
+
         return $list;
     }
 
@@ -26,6 +27,7 @@ class PostController extends Controller
     public function show($id)
     {
         $row = Post::findOrFail($id);
+
         return $row;
     }
 }

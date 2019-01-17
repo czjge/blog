@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="@{{ csrf_token }}">
-    <title>Laravel & Vue</title>
+    <title>彩虹天空-czjge的博客</title>
     <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>
 <body>
@@ -10,7 +10,7 @@
     <nav class="navbar navbar-inverse">
         <div class=" container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">LaravelVue</a>
+                <a class="navbar-brand" href="/">彩虹天空</a>
             </div>
         </div>
     </nav>
