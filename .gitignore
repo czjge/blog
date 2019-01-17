@@ -5,7 +5,7 @@
 /vendor
 .env
 package-lock.json
-composer-lock.json
+composer.lock
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
