@@ -1,6 +1,6 @@
 <template>
     <div class="panel panel-default">
-        <div class="panel-heading">首页</div>
+        <div class="panel-heading">首页1</div>
         <ul class="list-group">
             <li class="list-group-item"
                 v-for="row in lists">
