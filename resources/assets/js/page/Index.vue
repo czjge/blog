@@ -9,6 +9,7 @@
                 </router-link>
                 <span class="pull-right">{{ row.created }}</span>
             </li>
+            <vue-markdown>this is the default slot</vue-markdown>
         </ul>
     </div>
 </template>

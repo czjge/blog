@@ -14,6 +14,7 @@ Vue.use(VueRouter); // 如果在一个模块化工程中使用它，必须要通
 
 import store from './store/'; // vuex 数据存储所需对象
 import routes from './routes'; // 路由配置文件
+import VueMarkdown from 'vue-markdown'; // markdown
 
 // 实例化路由
 const router = new VueRouter({
@@ -22,5 +23,8 @@ const router = new VueRouter({
 
 var vm = new Vue({
     store,
-    router
+    router,
+    components: {
+        VueMarkdown
+    }
 }).$mount('#app');
