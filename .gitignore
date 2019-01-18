@@ -5,6 +5,7 @@
 .env
 package-lock.json
 composer.lock
+npm-debug.*
 
 /public/hot
 /public/storage
