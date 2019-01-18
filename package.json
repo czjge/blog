@@ -26,5 +26,8 @@
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.22",
     "vuex": "^3.0.1"
+  },
+  "dependencies": {
+    "vue-markdown": "^2.2.4"
   }
 }
