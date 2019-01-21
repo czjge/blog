@@ -9,12 +9,13 @@
                 </router-link>
                 <span class="pull-right">{{ row.created }}</span>
             </li>
-            <vue-markdown>this is the default slot</vue-markdown>
         </ul>
     </div>
 </template>
 <script>
     import { mapState, mapActions } from 'vuex';
+    import VueMarkdown from 'vue-markdown';
+
     export default({
         computed: mapState({
             lists: state => state.post.lists
@@ -26,6 +27,9 @@
             ...mapActions([
                 'getIndex'
             ])
+        },
+        components: {
+            VueMarkdown
         }
     });
 </script>

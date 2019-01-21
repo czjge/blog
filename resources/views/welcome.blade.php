@@ -15,7 +15,7 @@
         </div>
     </nav>
     <div class="container main">
-        <router-view />
+        <router-view><router-view />
     </div>
 </div>
 <script type="text/javascript" src="/js/app.js"></script>
