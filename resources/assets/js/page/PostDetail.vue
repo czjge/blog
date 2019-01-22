@@ -6,7 +6,7 @@
         </ol>
         <p>创建时间：{{ detail.created_at }}</p>
         <div>
-            <vue-markdown :source="content"></vue-markdown>
+            <vue-markdown :source="detail.content"></vue-markdown>
         </div>
     </div>
 </template>
@@ -28,17 +28,12 @@
             // js 中用 this.$route 获取当前路由，用 this.$router 获路由对象，全部路由信息
             // 在模板中用 $router  和 $router 直接调用
             var id = this.$route.params.id;
-            return this.getPostDetail(id);
+            this.getPostDetail(id);
         },
         methods: {
             ...mapActions([
                 'getPostDetail'
             ])
-        },
-        data() {
-            return {
-                content: this.created()
-            }
         },
         components: {
             VueMarkdown
