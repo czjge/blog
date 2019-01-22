@@ -7,10 +7,11 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-inverse">
-        <div class=" container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">彩虹天空</a>
+                <p class="navbar-text">左手代码右手诗</p>
             </div>
         </div>
     </nav>
@@ -18,6 +19,11 @@
         <router-view><router-view />
     </div>
 </div>
+<style>
+    .navbar-default .navbar-brand {
+        font-weight: bold;
+    }
+</style>
 <script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

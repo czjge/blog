@@ -14,6 +14,8 @@ Vue.use(VueRouter); // 如果在一个模块化工程中使用它，必须要通
 
 import store from './store/'; // vuex 数据存储所需对象
 import routes from './routes'; // 路由配置文件
+import VuePaginate from 'vue-paginate';
+Vue.use(VuePaginate);
 
 // 实例化路由
 const router = new VueRouter({
