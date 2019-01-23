@@ -1,10 +1,9 @@
 <template>
     <div>
         <ol class="breadcrumb">
-            <li><a href="/">首页</a></li>-
-            <li class="active">{{ detail.title }}</li>
+            <li><a href="/" class="text-muted">首页</a></li>-
+            <li class="text-muted">{{ detail.title }}</li>
         </ol>
-        <p>创建时间：{{ detail.created_at }}</p>
         <div>
             <vue-markdown :source="detail.content"></vue-markdown>
         </div>

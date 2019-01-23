@@ -1,7 +1,6 @@
 <template>
-    <div class="panel panel-default">
-        <div class="panel-heading"></div>
-        <ul class="list-group">
+    <div>
+        <ul class="list-group" style="margin-left: -40px;">
             <paginate
                     name="articles"
                     :list="lists"
@@ -9,10 +8,11 @@
             >
                 <li class="list-group-item"
                     v-for="row in paginated('articles')">
-                    <router-link :to="{path:'/' + row.id}">
+                    <router-link :to="{path:'/' + row.id}" class="text-muted lead">
                         {{ row.title }}
                     </router-link>
-                    <span class="pull-right">{{ row.created }}</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="small text-muted">Posted&nbsp;{{ row.created }}</span>
                 </li>
             </paginate>
         </ul>
