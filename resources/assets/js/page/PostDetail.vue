@@ -19,6 +19,7 @@
     import VueMarkdown from 'vue-markdown';
 
     export default({
+        name: "PostDetail",
         computed: mapState({
             detail: state => state.post.detail
         }),

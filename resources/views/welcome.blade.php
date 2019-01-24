@@ -25,9 +25,9 @@
                             服务端
                         </a>
                         <div class="dropdown-menu" aria-labelledby="backendDropdownMenuLink">
-                            <a class="dropdown-item" href="#">PHP</a>
-                            <a class="dropdown-item" href="#">PYTHON</a>
-                            <a class="dropdown-item" href="#">GO</a>
+                            <a class="dropdown-item" href="#/category/1">PHP</a>
+                            <a class="dropdown-item" href="#/category/2">PYTHON</a>
+                            <a class="dropdown-item" href="#/category/3">GO</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -35,18 +35,18 @@
                             前端
                         </a>
                         <div class="dropdown-menu" aria-labelledby="frontendDropdownMenuLink">
-                            <a class="dropdown-item" href="#">JS/CSS</a>
-                            <a class="dropdown-item" href="#">VUE</a>
+                            <a class="dropdown-item" href="#/category/4">JS/CSS</a>
+                            <a class="dropdown-item" href="#/category/5">VUE</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">服务器</a>
+                        <a class="nav-link" href="#/category/6">SERVER</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MYSQL</a>
+                        <a class="nav-link" href="#/category/7">MYSQL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">随笔</a>
+                        <a class="nav-link" href="#/category/8">随笔</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
     </div>
 
     <div class="container main">
-        <router-view><router-view />
+        <router-view></router-view>
     </div>
 
 </div>

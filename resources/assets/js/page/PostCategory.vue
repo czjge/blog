@@ -22,35 +22,28 @@
         </paginate-links>
     </div>
 </template>
-<style>
-    ul.paginate-links {
-        margin-top: 10px;
-        float: right;
-    }
-    ul.paginate-links li {
-        list-style: none;
-        float: left;
-        margin-left: 5px;
-        cursor: pointer;
-    }
-    ul.paginate-links > li.active > a {
-        text-decoration: underline;
-    }
-</style>
+
 <script>
     import { mapState, mapActions } from 'vuex';
 
-    export default({
-        name: "Index",
+    export default {
+        name: "PostCategory",
         computed: mapState({
-            lists: state => state.post.lists
+            lists: state => state.post.categories
         }),
         created() {
-            this.getIndex();
+            var cate_id = this.$route.params.cate_id;
+            this.getPostCategory(cate_id);
+        },
+        beforeRouteUpdate (to, from, next) {
+            // react to route changes...
+            // don't forget to call next()
+            var cate_id = to.params.cate_id;
+            this.getPostCategory(cate_id);
         },
         methods: {
             ...mapActions([
-                'getIndex'
+                'getPostCategory'
             ])
         },
         data () {
@@ -58,5 +51,9 @@
                 paginate: ['articles'],
             }
         }
-    });
+    }
 </script>
+
+<style scoped>
+
+</style>
