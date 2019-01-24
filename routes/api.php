@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('index', 'Api\PostController@index');
 Route::get('post/{id}', 'Api\PostController@detail');
 Route::get('post/category/{cate_id}', 'Api\PostController@category');
+Route::get('post/search/{kwd}', 'Api\PostController@search');

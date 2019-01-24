@@ -14,5 +14,9 @@ export default {
     // 文章分类
     getPostCategory: function (cate_id) {
         return axios.get('/api/post/category/' + cate_id)
+    },
+    // 文章搜索
+    getPostSearch: function (kwd) {
+        return axios.get('/api/post/search/' + kwd)
     }
 }
