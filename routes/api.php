@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('index', 'Api\PostController@index');
+Route::get('index/{page}', 'Api\PostController@index');
 Route::get('post/{id}', 'Api\PostController@detail');
-Route::get('post/category/{cate_id}', 'Api\PostController@category');
-Route::get('post/search/{kwd}', 'Api\PostController@search');
+Route::get('post/category/{cate_id}/{page}', 'Api\PostController@category');
+Route::get('post/search/{kwd}/{page}', 'Api\PostController@search');
