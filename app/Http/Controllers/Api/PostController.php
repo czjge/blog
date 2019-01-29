@@ -3,30 +3,24 @@
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\AppBaseController;
 use App\Models\Post;
 
-class PostController extends Controller
+class PostController extends AppBaseController
 {
-    const PAGE_NUM = 2;
-
     /**
      * 文章列表
      */
     public function index($page)
     {
-        $builder = Post::where("status", "=", 0)->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
+        $builder = Post::normal()->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
         $list = $builder->get();
-        $total = ceil($builder->count() / 2);
+        $total = ceil($builder->count() / self::PAGE_NUM);
         foreach ($list as $key => $value) {
             $list[$key]->created = $list[$key]->created_at->diffForHumans();
         }
 
-        return [
-            'total' => $total,
-            'list'  => $list,
-            'page'  => $page,
-        ];
+        return response()->json($this->paginateRet($total, $page, $list));
     }
 
     /**
@@ -44,18 +38,14 @@ class PostController extends Controller
      */
     public function category($cate_id, $page)
     {
-        $builder = Post::where("status", "=", 0)->whereRaw("FIND_IN_SET(?, tag_ids)", [$cate_id])->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
+        $builder = Post::normal()->whereRaw("FIND_IN_SET(?, tag_ids)", [$cate_id])->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
         $list = $builder->get();
-        $total = ceil($builder->count() / 2);
+        $total = ceil($builder->count() / self::PAGE_NUM);
         foreach ($list as $key => $value) {
             $list[$key]->created = $list[$key]->created_at->diffForHumans();
         }
 
-        return [
-            'total' => $total,
-            'list'  => $list,
-            'page'  => $page,
-        ];
+        return response()->json($this->paginateRet($total, $page, $list));
     }
 
     /**
@@ -63,17 +53,13 @@ class PostController extends Controller
      */
     public function search($kwd, $page)
     {
-        $builder = Post::where("status", "=", 0)->where("title", "like", "%".$kwd."%")->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
+        $builder = Post::normal()->where("title", "like", "%".$kwd."%")->latest()->latest()->skip(($page-1) * self::PAGE_NUM)->take(self::PAGE_NUM);
         $list = $builder->get();
-        $total = ceil($builder->count() / 2);
+        $total = ceil($builder->count() / self::PAGE_NUM);
         foreach ($list as $key => $value) {
             $list[$key]->created = $list[$key]->created_at->diffForHumans();
         }
 
-        return [
-            'total' => $total,
-            'list'  => $list,
-            'page'  => $page,
-        ];
+        return response()->json($this->paginateRet($total, $page, $list));
     }
 }
