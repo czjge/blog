@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('index/{page}', 'Api\PostController@index');
+Route::post('post/{id}', 'Api\PostController@detail');
+Route::post('post/category/{cate_id}/{page}', 'Api\PostController@category');
+Route::post('post/search/{kwd}/{page}', 'Api\PostController@search');

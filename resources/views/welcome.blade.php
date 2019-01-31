@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="@{{ csrf_token() }}">
     <title>彩虹天空-czjge的博客</title>
     <link rel="stylesheet" type="text/css" href="/css/app.css">
 </head>

@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::get('index/{page}', 'Api\PostController@index');
-Route::get('post/{id}', 'Api\PostController@detail');
-Route::get('post/category/{cate_id}/{page}', 'Api\PostController@category');
-Route::get('post/search/{kwd}/{page}', 'Api\PostController@search');
+//Route::get('index/{page}', 'Api\PostController@index');
+//Route::get('post/{id}', 'Api\PostController@detail');
+//Route::get('post/category/{cate_id}/{page}', 'Api\PostController@category');
+//Route::get('post/search/{kwd}/{page}', 'Api\PostController@search');
