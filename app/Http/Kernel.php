@@ -35,6 +35,13 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            //\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+            /*
+                the laravel_token cookie will only be set if:
+                You perform a GET request
+                Correctly set the X-CSRF-TOKEN & X-Requested-With headers (default on a base Laravel install)
+                The user is already authenticated
+             */
         ],
 
         'api' => [
@@ -61,6 +68,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        //'client' => \Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
     ];
 
     /**

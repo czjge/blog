@@ -12,6 +12,7 @@
         "barryvdh/laravel-cors": "^0.11.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
+        "laravel/passport": "^7.1",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
@@ -40,6 +41,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/Extensions/functions.php"
         ]
     },
     "autoload-dev": {

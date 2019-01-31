@@ -3,7 +3,7 @@ import axios from 'axios'
 export default {
     // 首页
     getIndex: function (page) {
-        return axios.get('/api/index/' + page)
+        axios.get('/api/ajax/index/' + page)
     },
     // 文章详情
     getPostDetail: function (id) {
