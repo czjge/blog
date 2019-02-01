@@ -11,14 +11,18 @@
 |
 */
 
+// SPA
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
+// 后台
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/post-article', 'HomeController@postArticle')->name("post-article");
 
+// API
 Route::post('index/{page}', 'Api\PostController@index');
 Route::post('post/{id}', 'Api\PostController@detail');
 Route::post('post/category/{cate_id}/{page}', 'Api\PostController@category');
