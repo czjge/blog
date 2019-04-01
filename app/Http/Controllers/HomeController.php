@@ -61,7 +61,6 @@ class HomeController extends Controller
     public function postEdit(Request $request)
     {
         $post = $request->except(["_token"]);
-        dd($post);
 
         $data = [
             "title"   => $post["title"],
@@ -69,7 +68,7 @@ class HomeController extends Controller
             "tag_ids" => array_key_exists("category", $post) ? implode(",", $post["category"]) : "",
         ];
 
-        Post::where('id', $data['id'])->update($data);
+        Post::where('id', $post['id'])->update($data);
 
         return response()->redirectToRoute("home")->with("alert", "编辑成功");
     }
