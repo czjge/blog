@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post-article', 'HomeController@postArticle')->name("post-article");
 Route::get('/edit/{id}', 'HomeController@edit');
-Route::post('/edit', 'HomeController@postEdit');
+Route::post('/edit', 'HomeController@postEdit')->name("edit-article");
 
 
 // API

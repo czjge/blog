@@ -50,11 +50,26 @@ class HomeController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-        dd($post);
+        $post_tags = PostTag::all();
+
+        return view('edit', [
+            "post" => $post,
+            "tags" => $post_tags,
+        ]);
     }
 
     public function postEdit(Request $request)
     {
+        $post = $request->except(["_token"]);
 
+        $data = [
+            "title"   => $post["title"],
+            "content" => $post["content"],
+            "tag_ids" => array_key_exists("category", $post) ? implode(",", $post["category"]) : "",
+        ];
+
+        Post::where('id', $data['id'])->update($data);
+
+        return response()->redirectToRoute("home")->with("alert", "编辑成功");
     }
 }
