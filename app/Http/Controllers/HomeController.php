@@ -49,7 +49,7 @@ class HomeController extends Controller
 
     public function edit($id)
     {
-        $post = Post::findOrFail();
+        $post = Post::findOrFail($id);
         dd($post);
     }
 
