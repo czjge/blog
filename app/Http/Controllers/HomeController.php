@@ -46,4 +46,15 @@ class HomeController extends Controller
 
         return response()->redirectToRoute("home")->with("alert", "添加成功");
     }
+
+    public function edit($id)
+    {
+        $post = Post::findOrFail();
+        dd($post);
+    }
+
+    public function postEdit(Request $request)
+    {
+
+    }
 }

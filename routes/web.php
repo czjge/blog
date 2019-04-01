@@ -21,6 +21,9 @@ Auth::routes();
 // 后台
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post-article', 'HomeController@postArticle')->name("post-article");
+Route::get('/edit/{id}', 'HomeController@edit');
+Route::post('/edit', 'HomeController@postEdit');
+
 
 // API
 Route::post('index/{page}', 'Api\PostController@index');
