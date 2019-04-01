@@ -61,6 +61,7 @@ class HomeController extends Controller
     public function postEdit(Request $request)
     {
         $post = $request->except(["_token"]);
+        dd($post);
 
         $data = [
             "title"   => $post["title"],
