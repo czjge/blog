@@ -9,13 +9,20 @@
                     <a class="nav-link" href="/">主页 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="backendAndFrontEndDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        前后端
+                    <a class="nav-link dropdown-toggle" href="#" id="backendDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        服务端
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="backendAndFrontEndDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="backendDropdownMenuLink">
                         <a class="dropdown-item" href="#/category/1">php</a>
                         <a class="dropdown-item" href="#/category/2">python</a>
                         <a class="dropdown-item" href="#/category/3">golang</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="frontendDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        前端
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="frontendDropdownMenuLink">
                         <a class="dropdown-item" href="#/category/4">js/css</a>
                         <a class="dropdown-item" href="#/category/5">vue</a>
                     </div>
@@ -25,18 +32,19 @@
                         其他
                     </a>
                     <div class="dropdown-menu" aria-labelledby="elseDropdownMenuLink">
-                        <a class="nav-link" href="#/category/6">nginx</a>
-                        <a class="nav-link" href="#/category/7">mysql</a>
+                        <a class="dropdown-item" href="#/category/6">nginx</a>
+                        <a class="dropdown-item" href="#/category/7">mysql</a>
+                        <a class="dropdown-item" href="#/category/8">essay</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/category/8">essay</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/category/9">self-introduction</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/category/10">self-show</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="selfDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        关于我
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="selfDropdownMenuLink">
+                        <a class="dropdown-item" href="#/category/9">self-introduction</a>
+                        <a class="dropdown-item" href="#/category/10">self-show</a>
+                    </div>
                 </li>
             </ul>
         </div>
