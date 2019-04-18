@@ -39,7 +39,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="selfDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        前端
+                        我
                     </a>
                     <div class="dropdown-menu" aria-labelledby="selfDropdownMenuLink">
                         <a class="nav-link" href="#/category/9">self-introduction</a>
