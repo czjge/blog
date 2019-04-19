@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\PostTag;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -71,5 +71,10 @@ class HomeController extends Controller
         Post::where('id', $post['id'])->update($data);
 
         return response()->redirectToRoute("home")->with("alert", "编辑成功");
+    }
+
+    public function aboutMe()
+    {
+        return view('about-me');
     }
 }

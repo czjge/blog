@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
 use App\Models\Post;
 
 class PostController extends AppBaseController
 {
-    // 测试webhook
     /**
      * 文章列表
      */

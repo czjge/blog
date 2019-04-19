@@ -24,6 +24,7 @@ Route::post('/post-article', 'HomeController@postArticle')->name("post-article")
 Route::get('/edit/{id}', 'HomeController@edit');
 Route::post('/edit', 'HomeController@postEdit')->name("edit-article");
 
+Route::get('/about-me', 'HomeController@aboutMe')->middleware('auth.basic');
 
 // API
 Route::post('index/{page}', 'Api\PostController@index');
