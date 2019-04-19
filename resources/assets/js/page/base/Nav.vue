@@ -42,7 +42,7 @@
                         关于我
                     </a>
                     <div class="dropdown-menu" aria-labelledby="selfDropdownMenuLink">
-                        <a class="dropdown-item" href="#/category/9">self-introduction</a>
+                        <a class="dropdown-item" href="/about-me">self-introduction</a>
                         <a class="dropdown-item" href="#/category/10">self-show</a>
                     </div>
                 </li>
