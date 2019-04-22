@@ -1,12 +1,12 @@
 ##### 基本信息
 
-姓名：王江                                                 性别：男
+姓名：王江&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;性别：男
 
-出生时间：1990,9                                     籍贯：四川崇州
+出生时间：1990,9&emsp;&emsp;&emsp;&emsp;籍贯：四川崇州
 
-学历：本科                                                 毕业院校：重庆大学
+学历：本科&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;毕业院校：重庆大学
 
-手机：18161214501                                 邮箱：20097018@cqu.edu.cn
+手机：18161214501&emsp;&emsp;&emsp;邮箱：20097018@cqu.edu.cn
 
 
 
@@ -67,7 +67,7 @@
   - 介绍：一个灵巧方便的会议辅助系统，由控制端和被控制端组成。
   - 技术栈：
     - php提供api
-    - golang和nodejs组成的桥作为UI（https://github.com/Equanox/gotron）
+    - [gotron](https://github.com/Equanox/gotron)
 
 - 诊途app
 
@@ -77,11 +77,11 @@
     - rabbitmq传递订单相关事件，python脚本做服务端守护进程运行消费者程序
     - 客户端推送使用了融云（1版）和环信（2版）
     - 图数据库（neo4j）处理医生和患者之间的逻辑关系
-- 下载链接：https://mp.doctorofsc.cn/appdownload/download.html
+- [下载链接](https://mp.doctorofsc.cn/appdownload/download.html)
 
 - 微信投票系统
   - 介绍：功能完备的微信投票系统，经多次大型线上投票活动检验，PV破千万。
-  - 项目地址：https://github.com/czjge/wechat-vote
+  - [项目地址](https://github.com/czjge/wechat-vote)
 
 - OSCE考试系统
   
@@ -95,5 +95,5 @@
 
 ##### 其他
 
-- github：https://github.com/czjge/
-- 个人网站：https://www.czjge.cn
+- [github](https://github.com/czjge/)
+- [个人网站](https://www.czjge.cn)
