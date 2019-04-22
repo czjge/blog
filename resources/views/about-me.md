@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 ##### 基本信息
 
@@ -100,4 +100,4 @@
 - [github](https://github.com/czjge/)
 - [个人网站](https://www.czjge.cn)
 
-</center>
+</div>
