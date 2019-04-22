@@ -1,3 +1,5 @@
+<center>
+
 ##### 基本信息
 
 姓名：王江&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;性别：男
@@ -97,3 +99,5 @@
 
 - [github](https://github.com/czjge/)
 - [个人网站](https://www.czjge.cn)
+
+</center>
